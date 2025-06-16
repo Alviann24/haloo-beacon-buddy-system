@@ -1,8 +1,8 @@
 
-import LogoShowcase from "../components/LogoShowcase";
+import Cover from './Cover';
 
 const Index = () => {
-  return <LogoShowcase />;
+  return <Cover />;
 };
 
 export default Index;
