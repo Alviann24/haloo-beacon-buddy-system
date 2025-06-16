@@ -19,11 +19,11 @@ const Portfolio = () => {
       <div className="min-h-screen py-10 md:py-20 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 md:mb-8">PORTFOLIO</h1>
-            <p className="text-white/80 text-base md:text-lg max-w-2xl mx-auto mb-2">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#E5DFDA] mb-6 md:mb-8">PORTFOLIO</h1>
+            <p className="text-[#E5DFDA]/80 text-base md:text-lg max-w-2xl mx-auto mb-2">
               create designs for every activity that I post on Instagram to make it look more attractive
             </p>
-            <p className="text-white/60 text-sm md:text-base">
+            <p className="text-[#E5DFDA]/60 text-sm md:text-base">
               for other design recap results, you can see them on Instagram @afzainizam
             </p>
           </div>
@@ -33,20 +33,20 @@ const Portfolio = () => {
             {portfolioItems.map((item) => (
               <div
                 key={item.id}
-                className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
+                className="group relative bg-[#E5DFDA]/20 backdrop-blur-sm rounded-2xl overflow-hidden border border-[#E5DFDA]/30 hover:border-[#E5DFDA]/50 transition-all duration-300 hover:scale-105"
               >
-                <div className="aspect-square bg-gradient-to-br from-purple-400/30 to-pink-400/30 flex items-center justify-center">
+                <div className="aspect-square bg-gradient-to-br from-[#E5DFDA]/30 to-[#3D348B]/30 flex items-center justify-center">
                   <div className="text-3xl md:text-4xl">🎨</div>
                 </div>
                 <div className="p-3 md:p-4">
-                  <h3 className="text-white font-semibold text-base md:text-lg mb-1">{item.title}</h3>
-                  <p className="text-white/60 text-xs md:text-sm">{item.category}</p>
+                  <h3 className="text-[#E5DFDA] font-semibold text-base md:text-lg mb-1">{item.title}</h3>
+                  <p className="text-[#E5DFDA]/60 text-xs md:text-sm">{item.category}</p>
                 </div>
                 
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#3D348B]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-3 md:p-4 w-full">
-                    <button className="w-full bg-white/20 backdrop-blur-sm text-white py-2 rounded-lg font-medium hover:bg-white/30 transition-colors text-sm md:text-base">
+                    <button className="w-full bg-[#E5DFDA]/20 backdrop-blur-sm text-[#E5DFDA] py-2 rounded-lg font-medium hover:bg-[#E5DFDA]/30 transition-colors text-sm md:text-base">
                       View Details
                     </button>
                   </div>
@@ -57,30 +57,30 @@ const Portfolio = () => {
 
           {/* Social media post simulation */}
           <div className="mt-12 md:mt-16 max-w-sm md:max-w-md mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6 border border-white/20">
-              <div className="bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-xl aspect-square mb-3 md:mb-4 flex items-center justify-center">
+            <div className="bg-[#E5DFDA]/20 backdrop-blur-sm rounded-2xl p-4 md:p-6 border border-[#E5DFDA]/30">
+              <div className="bg-gradient-to-br from-[#E5DFDA]/30 to-[#3D348B]/30 rounded-xl aspect-square mb-3 md:mb-4 flex items-center justify-center">
                 <div className="text-4xl md:text-6xl">📱</div>
               </div>
               
               <div className="flex items-center justify-between mb-3 md:mb-4">
                 <div className="flex space-x-3 md:space-x-4">
-                  <button className="text-white hover:text-red-400 transition-colors text-lg md:text-xl">❤️</button>
-                  <button className="text-white hover:text-blue-400 transition-colors text-lg md:text-xl">💬</button>
-                  <button className="text-white hover:text-green-400 transition-colors text-lg md:text-xl">📤</button>
+                  <button className="text-[#E5DFDA] hover:text-red-400 transition-colors text-lg md:text-xl">❤️</button>
+                  <button className="text-[#E5DFDA] hover:text-blue-400 transition-colors text-lg md:text-xl">💬</button>
+                  <button className="text-[#E5DFDA] hover:text-green-400 transition-colors text-lg md:text-xl">📤</button>
                 </div>
-                <button className="text-white hover:text-yellow-400 transition-colors text-lg md:text-xl">🔖</button>
+                <button className="text-[#E5DFDA] hover:text-yellow-400 transition-colors text-lg md:text-xl">🔖</button>
               </div>
               
-              <p className="text-white/80 text-xs md:text-sm mb-2">
+              <p className="text-[#E5DFDA]/80 text-xs md:text-sm mb-2">
                 <span className="font-semibold">●●●</span> Liked afzainizam and others
               </p>
               
-              <div className="flex items-center justify-center space-x-4 md:space-x-6 text-white/60 mt-3 md:mt-4">
-                <button className="hover:text-white transition-colors text-lg md:text-xl">🏠</button>
-                <button className="hover:text-white transition-colors text-lg md:text-xl">🔍</button>
-                <button className="hover:text-white transition-colors text-lg md:text-xl">➕</button>
-                <button className="hover:text-white transition-colors text-lg md:text-xl">🛒</button>
-                <button className="hover:text-white transition-colors text-lg md:text-xl">👤</button>
+              <div className="flex items-center justify-center space-x-4 md:space-x-6 text-[#E5DFDA]/60 mt-3 md:mt-4">
+                <button className="hover:text-[#E5DFDA] transition-colors text-lg md:text-xl">🏠</button>
+                <button className="hover:text-[#E5DFDA] transition-colors text-lg md:text-xl">🔍</button>
+                <button className="hover:text-[#E5DFDA] transition-colors text-lg md:text-xl">➕</button>
+                <button className="hover:text-[#E5DFDA] transition-colors text-lg md:text-xl">🛒</button>
+                <button className="hover:text-[#E5DFDA] transition-colors text-lg md:text-xl">👤</button>
               </div>
             </div>
           </div>
