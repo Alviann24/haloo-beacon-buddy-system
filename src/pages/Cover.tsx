@@ -1,6 +1,6 @@
-
 import React from 'react';
 import Layout from '../components/Layout';
+import { ChevronDown } from 'lucide-react';
 
 const Cover = () => {
   return (
@@ -43,12 +43,13 @@ const Cover = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator with text */}
         <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="animate-bounce">
-            <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-[#E5DFDA]/50 rounded-full flex justify-center">
-              <div className="w-1 h-2 md:h-3 bg-[#E5DFDA]/50 rounded-full mt-1 md:mt-2"></div>
-            </div>
+          <div className="flex flex-col items-center space-y-2 animate-bounce">
+            <p className="text-[#E5DFDA]/70 text-sm md:text-base font-medium">
+              Lihat halaman selanjutnya
+            </p>
+            <ChevronDown className="w-6 h-6 md:w-8 md:h-8 text-[#E5DFDA]/70" />
           </div>
         </div>
       </div>
