@@ -44,49 +44,49 @@ const Certificate = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen py-20 px-8">
+      <div className="min-h-screen py-10 md:py-20 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header with classical statue */}
-          <div className="text-center mb-16 relative">
+          <div className="text-center mb-12 md:mb-16 relative">
             <div className="absolute inset-0 flex items-center justify-center opacity-20">
-              <div className="text-9xl">🏛️</div>
+              <div className="text-6xl md:text-9xl">🏛️</div>
             </div>
             <div className="relative z-10">
-              <h1 className="text-6xl font-bold text-white mb-4">CERTIFICATES</h1>
-              <div className="w-32 h-32 mx-auto mb-6 relative">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">CERTIFICATES</h1>
+              <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 md:mb-6 relative">
                 <div className="w-full h-full bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30">
-                  <div className="text-4xl">🏛️</div>
+                  <div className="text-3xl md:text-4xl">🏛️</div>
                 </div>
-                <div className="absolute top-8 left-1/2 transform -translate-x-1/2">
-                  <div className="text-2xl">😎</div>
+                <div className="absolute top-6 md:top-8 left-1/2 transform -translate-x-1/2">
+                  <div className="text-xl md:text-2xl">😎</div>
                 </div>
               </div>
-              <div className="bg-yellow-400 text-purple-900 px-4 py-2 rounded-full inline-block font-semibold">
+              <div className="bg-yellow-400 text-purple-900 px-3 md:px-4 py-1 md:py-2 rounded-full inline-block font-semibold text-sm md:text-base">
                 Certificate Achievement
               </div>
             </div>
           </div>
 
           {/* Certificates Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {certificates.map((cert) => (
               <div
                 key={cert.id}
                 className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
               >
                 {/* Certificate Design */}
-                <div className="aspect-[4/3] bg-gradient-to-br from-yellow-100 to-yellow-200 p-6 relative">
+                <div className="aspect-[4/3] bg-gradient-to-br from-yellow-100 to-yellow-200 p-4 md:p-6 relative">
                   {/* Decorative border */}
-                  <div className="absolute inset-4 border-4 border-yellow-600 rounded-lg"></div>
-                  <div className="absolute inset-6 border-2 border-yellow-500 rounded-lg"></div>
+                  <div className="absolute inset-3 md:inset-4 border-2 md:border-4 border-yellow-600 rounded-lg"></div>
+                  <div className="absolute inset-4 md:inset-6 border-1 md:border-2 border-yellow-500 rounded-lg"></div>
                   
                   {/* Certificate content */}
                   <div className="relative z-10 h-full flex flex-col justify-center items-center text-center">
                     <div className="text-yellow-800 mb-2">
-                      <div className="text-2xl mb-2">🏆</div>
-                      <h3 className="font-bold text-lg mb-1">{cert.title}</h3>
-                      <p className="text-sm mb-2">{cert.organization}</p>
-                      <div className="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold mb-2">
+                      <div className="text-xl md:text-2xl mb-1 md:mb-2">🏆</div>
+                      <h3 className="font-bold text-sm md:text-lg mb-1">{cert.title}</h3>
+                      <p className="text-xs md:text-sm mb-1 md:mb-2">{cert.organization}</p>
+                      <div className="bg-yellow-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold mb-1 md:mb-2">
                         {cert.achievement}
                       </div>
                       <p className="text-xs leading-tight">{cert.description}</p>
@@ -94,22 +94,22 @@ const Certificate = () => {
                   </div>
                   
                   {/* Year badge */}
-                  <div className="absolute top-4 right-4 bg-purple-600 text-white px-2 py-1 rounded text-sm font-semibold">
+                  <div className="absolute top-2 md:top-4 right-2 md:right-4 bg-purple-600 text-white px-1 md:px-2 py-1 rounded text-xs md:text-sm font-semibold">
                     {cert.year}
                   </div>
                   
                   {/* Type badge */}
-                  <div className="absolute bottom-4 left-4 bg-blue-600 text-white px-2 py-1 rounded text-xs">
+                  <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 bg-blue-600 text-white px-1 md:px-2 py-1 rounded text-xs">
                     {cert.type}
                   </div>
                 </div>
 
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-6 w-full text-white">
-                    <h4 className="font-bold text-lg mb-2">{cert.title}</h4>
-                    <p className="text-sm text-white/80 mb-3">{cert.description}</p>
-                    <button className="w-full bg-white/20 backdrop-blur-sm text-white py-2 rounded-lg font-medium hover:bg-white/30 transition-colors">
+                  <div className="p-4 md:p-6 w-full text-white">
+                    <h4 className="font-bold text-base md:text-lg mb-2">{cert.title}</h4>
+                    <p className="text-xs md:text-sm text-white/80 mb-3">{cert.description}</p>
+                    <button className="w-full bg-white/20 backdrop-blur-sm text-white py-2 rounded-lg font-medium hover:bg-white/30 transition-colors text-sm md:text-base">
                       View Certificate
                     </button>
                   </div>
@@ -119,21 +119,21 @@ const Certificate = () => {
           </div>
 
           {/* Achievement summary */}
-          <div className="mt-16 text-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-6">Achievement Summary</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="mt-12 md:mt-16 text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">Achievement Summary</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-yellow-400 mb-2">15+</div>
-                  <p className="text-white/80">Certificates Earned</p>
+                  <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">15+</div>
+                  <p className="text-white/80 text-sm md:text-base">Certificates Earned</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-yellow-400 mb-2">5+</div>
-                  <p className="text-white/80">Competition Wins</p>
+                  <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">5+</div>
+                  <p className="text-white/80 text-sm md:text-base">Competition Wins</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-yellow-400 mb-2">3</div>
-                  <p className="text-white/80">Years Active</p>
+                  <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">3</div>
+                  <p className="text-white/80 text-sm md:text-base">Years Active</p>
                 </div>
               </div>
             </div>
